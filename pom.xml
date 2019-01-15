@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>vu.che</groupId>
-	<artifactId>shell</artifactId>
+	<artifactId>home_budget</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>shell</name>
-	<description>Shell for all spring projects</description>
+	<name>home_budget</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
