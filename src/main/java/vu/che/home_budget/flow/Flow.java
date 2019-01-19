@@ -6,50 +6,26 @@ import lombok.ToString;
 import vu.che.home_budget.categories.CategoryEntity;
 import vu.che.home_budget.tags.TagEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString(callSuper = true)
-@Entity
-@Table(name="flow")
-public class Flow {
+@ToString
+public class Flow implements Serializable {
 
-    @Id
-    private Long id;
+    private static final long serialVersionUID = -3265136931033282217L;
 
-    @Column(name="entry_date")
     private LocalDateTime entryDate;
-
     private String name;
-
     private String description;
-
     private double value;
-
-    @JoinColumn(name = "currency_type")
-    @ManyToOne
     private CurrencyTypeEntity currencyType;
-
-    @Column(name="income_type")
     private FlowType flowType;
-
-    @OneToMany
     private List<TagEntity> tags;
-
-    @ManyToOne
     private CategoryEntity category;
-
     private Boolean processed;
-
-    @Column(name = "automatic_processing")
     private Boolean automaticProcessing;
+
 }

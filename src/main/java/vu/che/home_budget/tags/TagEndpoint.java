@@ -1,4 +1,4 @@
-package vu.che.home_budget.flow;
+package vu.che.home_budget.tags;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,14 +9,14 @@ import vu.che.utils.exceptions.ResourceNotFoundException;
 import vu.che.utils.web.Response;
 
 @RestController
-@RequestMapping(value = "flow")
+@RequestMapping(value = "tag")
 @RequiredArgsConstructor
-public class FlowEndpoint {
+public class TagEndpoint {
 
-    private final FlowService flowService;
+    private TagService tagService;
 
     @GetMapping(value = "{id}")
-    public Response<Flow> getFlowById(@PathVariable Long id) {
-        return new Response<>(flowService.getById(id).orElseThrow(ResourceNotFoundException::new));
+    public Response<Tag> getTagById(@PathVariable long id){
+        return new Response<>(tagService.getById(id).orElseThrow(ResourceNotFoundException::new));
     }
 }
