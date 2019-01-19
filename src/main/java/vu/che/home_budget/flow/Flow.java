@@ -7,16 +7,21 @@ import vu.che.home_budget.categories.CategoryEntity;
 import vu.che.home_budget.tags.TagEntity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
 @Setter
 @ToString(callSuper = true)
-public abstract class Flow {
+@Entity
+@Table(name="flow")
+public class Flow {
 
     @Id
     private Long id;
@@ -30,17 +35,18 @@ public abstract class Flow {
 
     private double value;
 
-    @Column(name="currency_type")
+    @JoinColumn(name = "currency_type")
+    @ManyToOne
     private CurrencyTypeEntity currencyType;
 
     @Column(name="income_type")
     private FlowType flowType;
 
     @OneToMany
-    List<TagEntity> tags;
+    private List<TagEntity> tags;
 
     @ManyToOne
-    CategoryEntity category;
+    private CategoryEntity category;
 
     private Boolean processed;
 
