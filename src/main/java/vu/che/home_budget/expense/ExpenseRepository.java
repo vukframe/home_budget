@@ -1,8 +1,8 @@
-package vu.che.home_budget.persons;
+package vu.che.home_budget.expense;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PersonRepository extends CrudRepository<PersonEntity, Long> {
+public interface ExpenseRepository extends CrudRepository<ExpenseEntity, Long> {
 }

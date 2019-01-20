@@ -14,10 +14,10 @@ public class Category implements Serializable {
     private static final long serialVersionUID = -7074976144804086654L;
 
     private CategoryEntity parent;
-    private CategoryType categoryType;
+    private CategoryTypeEnum categoryType;
     private Boolean isLeaf;
     private String code;
-    private String value;
+    private String name;
     private String description;
     private Boolean active;
 

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import vu.che.home_budget.categories.CategoryEntity;
+import vu.che.home_budget.currency.CurrencyTypeEntity;
 import vu.che.home_budget.tags.TagEntity;
 
 import javax.persistence.Column;
@@ -38,9 +39,6 @@ public class FlowEntity {
     @JoinColumn(name = "currency_type")
     @ManyToOne
     private CurrencyTypeEntity currencyType;
-
-    @Column(name="income_type")
-    private FlowType flowType;
 
     @OneToMany
     private List<TagEntity> tags;

@@ -22,14 +22,14 @@ public class CategoryEntity {
     private CategoryEntity parent;
 
     @Column(name="category_type")
-    private CategoryType categoryType;
+    private CategoryTypeEnum categoryType;
 
     @Column(name="is_leaf")
     private Boolean isLeaf;
 
     private String code;
 
-    private String value;
+    private String name;
 
     private String description;
 

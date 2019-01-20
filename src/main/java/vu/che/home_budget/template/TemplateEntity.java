@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import vu.che.home_budget.categories.CategoryEntity;
-import vu.che.home_budget.flow.CurrencyTypeEntity;
+import vu.che.home_budget.currency.CurrencyTypeEntity;
 import vu.che.home_budget.flow.FlowType;
 import vu.che.home_budget.tags.TagEntity;
 

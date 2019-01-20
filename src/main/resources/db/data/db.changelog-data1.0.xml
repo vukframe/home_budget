@@ -7,9 +7,12 @@
 
 
     <changeSet author="che" id="1">
-        <sqlFile path="demo.sql" relativeToChangelogFile="true"/>
+        <sqlFile path="person.sql" relativeToChangelogFile="true"/>
     </changeSet>
     <changeSet author="che" id="2">
-        <sqlFile path="person.sql" relativeToChangelogFile="true"/>
+        <sqlFile path="categories.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet author="che" id="3">
+        <sqlFile path="currency.sql" relativeToChangelogFile="true"/>
     </changeSet>
 </databaseChangeLog>

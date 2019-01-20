@@ -7,27 +7,24 @@
 
 
     <changeSet author="che" id="1">
-        <sqlFile path="demo.sql" relativeToChangelogFile="true"/>
-    </changeSet>
-    <changeSet author="che" id="2">
         <sqlFile path="person.sql" relativeToChangelogFile="true"/>
     </changeSet>
-    <changeSet author="che" id="3">
+    <changeSet author="che" id="2">
         <sqlFile path="currency_type.sql" relativeToChangelogFile="true"/>
     </changeSet>
-    <changeSet author="che" id="4">
+    <changeSet author="che" id="3">
         <sqlFile path="tag.sql" relativeToChangelogFile="true"/>
     </changeSet>
-    <changeSet author="che" id="5">
+    <changeSet author="che" id="4">
         <sqlFile path="category.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet author="che" id="5">
+        <sqlFile path="flow.sql" relativeToChangelogFile="true"/>
     </changeSet>
     <changeSet author="che" id="6">
         <sqlFile path="income.sql" relativeToChangelogFile="true"/>
     </changeSet>
     <changeSet author="che" id="7">
         <sqlFile path="expense.sql" relativeToChangelogFile="true"/>
-    </changeSet>
-    <changeSet author="che" id="8">
-        <sqlFile path="flow.sql" relativeToChangelogFile="true"/>
     </changeSet>
 </databaseChangeLog>

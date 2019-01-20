@@ -1,4 +1,4 @@
-package vu.che.home_budget.flow;
+package vu.che.home_budget.currency;
 
 import lombok.Getter;
 import lombok.Setter;

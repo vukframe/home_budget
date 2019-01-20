@@ -1,6 +1,6 @@
 package vu.che.home_budget.categories;
 
-public enum CategoryType {
+public enum CategoryTypeEnum {
     INCOME,
     OUTCOME,
     FLOW,

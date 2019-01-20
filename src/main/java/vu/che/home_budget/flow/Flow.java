@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import vu.che.home_budget.categories.CategoryEntity;
+import vu.che.home_budget.currency.CurrencyTypeEntity;
 import vu.che.home_budget.tags.TagEntity;
 
 import java.io.Serializable;
@@ -22,7 +23,6 @@ public class Flow implements Serializable {
     private String description;
     private double value;
     private CurrencyTypeEntity currencyType;
-    private FlowType flowType;
     private List<TagEntity> tags;
     private CategoryEntity category;
     private Boolean processed;
